@@ -10,19 +10,23 @@
 ##### Steps to implement the script #####
 1. Create database status.
 2. Create table container_status with two columns id and status
->    mysql> describe container_status;
->    +--------+-------------+------+-----+---------+-------+
->    | Field  | Type        | Null | Key | Default | Extra |
->    +--------+-------------+------+-----+---------+-------+
->    | id     | int(11)     | YES  |     | NULL    |       |
->    | status | varchar(20) | YES  |     | NULL    |       |
->    +--------+-------------+------+-----+---------+-------+
+```
+    mysql> describe container_status;
+    +--------+-------------+------+-----+---------+-------+
+    | Field  | Type        | Null | Key | Default | Extra |
+    +--------+-------------+------+-----+---------+-------+
+    | id     | int(11)     | YES  |     | NULL    |       |
+    | status | varchar(20) | YES  |     | NULL    |       |
+    +--------+-------------+------+-----+---------+-------+
+ ```
 3. Set initial state of table as below.
->    +------+--------+
->    | id   | status |
->    +------+--------+
->    |    1 | up     |
->    +------+--------+
+```
+    +------+--------+
+    | id   | status |
+    +------+--------+
+    |    1 | up     |
+    +------+--------+
+ ```
 4. Configure credentials to be used for mysql as login path.
 [Doc about login path](https://dev.mysql.com/doc/refman/5.6/en/option-file-options.html)
 5. Schedule the script to run at required intervals.
