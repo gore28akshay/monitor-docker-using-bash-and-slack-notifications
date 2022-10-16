@@ -4,25 +4,27 @@
 ##### Components of application #####
 1. Bash script
 2. MySQL DB
-3. Slack token. [Configure Slack Web App](https://api.slack.com/tutorials/tracks/getting-a-token)
+3. Slack token.
+[Configure Slack Web App](https://api.slack.com/tutorials/tracks/getting-a-token)
 
 ##### Steps to implement the script #####
 1. Create database status.
 2. Create table container_status with two columns id and status
-    mysql> describe container_status;
-    +--------+-------------+------+-----+---------+-------+
-    | Field  | Type        | Null | Key | Default | Extra |
-    +--------+-------------+------+-----+---------+-------+
-    | id     | int(11)     | YES  |     | NULL    |       |
-    | status | varchar(20) | YES  |     | NULL    |       |
-    +--------+-------------+------+-----+---------+-------+
+>    mysql> describe container_status;
+>    +--------+-------------+------+-----+---------+-------+
+>    | Field  | Type        | Null | Key | Default | Extra |
+>    +--------+-------------+------+-----+---------+-------+
+>    | id     | int(11)     | YES  |     | NULL    |       |
+>    | status | varchar(20) | YES  |     | NULL    |       |
+>    +--------+-------------+------+-----+---------+-------+
 3. Set initial state of table as below.
-    +------+--------+
-    | id   | status |
-    +------+--------+
-    |    1 | up     |
-    +------+--------+
-4. Configure credentials to be used for mysql as login path. [Doc about login path] (https://dev.mysql.com/doc/refman/5.6/en/option-file-options.html)
+>    +------+--------+
+>    | id   | status |
+>    +------+--------+
+>    |    1 | up     |
+>    +------+--------+
+4. Configure credentials to be used for mysql as login path.
+[Doc about login path](https://dev.mysql.com/doc/refman/5.6/en/option-file-options.html)
 5. Schedule the script to run at required intervals.
 6. Save the slack token in text file at the same folder level as script.
 ---
